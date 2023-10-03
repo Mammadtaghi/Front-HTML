@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.redBlock{
+    width: 50px;
+    height: 50px;
+    background-color: crimson;
+}
+
+.fa-bars{
+    font-size: 40px;
+    align-items: flex-end;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .fa-bars{
+        display: inline;
+    }
+    .parent{
+        background-color: teal !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .fa-bars{
+        display: none;
+    }
+}
+
+
+h1{
+    text-align: center;
+}
+
+.box1{
+    background-color: aquamarine;
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+
+.box2{
+    background-color: cadetblue;
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+
+.box3{
+    background-color: turquoise;
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+
+.box4{
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+
+}
+
+
+@media screen and (max-width: 600px) and (min-width: 500px) {
+    .parent{
+        background-color: brown;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 601px) {
+    .parent{
+        background-color: crimson;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .parent{
+        background-color: springgreen;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .box{
+        display: none;
+    }
+}
+
+.parent2{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+p{
+    font-size: 50px;
+    color: turquoise;
+    padding: 20px;
+    border: 5px solid cyan;
+}

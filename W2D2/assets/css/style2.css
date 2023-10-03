@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainBox{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: silver;
+}
+
+@media screen and (max-width: 600px) {
+    .mainBox{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
