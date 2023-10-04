@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    display: grid;
+    /* grid-auto-flow: column; */
+
+    height: 100vh;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: silver;
+}
+
+.box{
+    background-color: skyblue;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+
+    /* animation-name: rainbow; */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.box1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    
+}
+
+.box2{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.box3{
+    grid-row-start: 3;
+    grid-row-end: 20;
+}
+
+.box4{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 3;
+    grid-row-end: 20;
+}
+
+.box5{
+    grid-row-start: 3;
+    grid-row-end: 20;
+}
+
+.box6{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+@keyframes rainbow {
+    0%{
+        background-color: red;
+    }
+    16.66%{
+        background-color: orange;
+    }
+    33.33%{
+        background-color: yellow;
+    }
+    50%{ 
+        background-color: green;
+    }
+    66.64%{
+        background-color: cyan;
+    }
+    83.5%{
+        background-color: blue;
+    }
+    100%{
+        background-color: purple;
+    }
+}
