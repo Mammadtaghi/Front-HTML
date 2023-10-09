@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+main {
+  width: calc(100vw - 18rem);
+  position: sticky;
+  top: 0;
+  left: 17rem;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 993px) {
+  .sideNav {
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sideNav .photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 10px solid rgba(248, 156, 81, 0.568);
+  }
+  .sideNav .navList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    margin-top: 20px;
+  }
+  .sideNav .navList li .headAnchors {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .sideNav .person {
+    display: none;
+  }
+  .sideNav .togglerBox {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sideNav {
+    width: 100vw;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: chocolate;
+    display: flex;
+    align-items: center;
+  }
+  .sideNav .photo {
+    display: none;
+  }
+  .sideNav .navList {
+    display: none;
+  }
+  .sideNav .person {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    position: absolute;
+    left: 20px;
+  }
+  .sideNav .togglerBox {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 20px;
+    border: 1px solid black;
+  }
+  .sideNav .togglerBox .fa-bars {
+    font-size: 30px;
+    padding: 8px 12px;
+  }
+}
+@media screen and (min-width: 993px) {
+  #person {
+    height: 100vh;
+  }
+  #person .personBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 3em;
+  }
+  #person .personBox .personFullName {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  #person .personBox .personFullName .personName {
+    color: chocolate;
+  }
+  #person .personBox .personLocation {
+    font-size: 20px;
+    margin-bottom: 3em;
+  }
+  #person .personBox .personLocation .personEmail {
+    color: chocolate;
+  }
+  #person .personBox .personInfo {
+    font-size: 20px;
+    margin-bottom: 2em;
+  }
+  #person .personBox .iconBox .fa-brands {
+    margin-right: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 100%;
+    background-color: #424242;
+  }
+  #person .seperator {
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 993px) {
+  #experience {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+  }
+  #experience .experienceTitle {
+    font-size: 40px;
+    margin-bottom: 1em;
+  }
+  #experience .experienceJobs {
+    margin-bottom: 3em;
+  }
+  #experience .experienceJobs .jobTitleBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #experience .experienceJobs .jobTitleBox .jobName {
+    font-size: 25px;
+  }
+  #experience .experienceJobs .jobTitleBox .experienceDate {
+    margin-right: 3em;
+    color: chocolate;
+  }
+  #experience .experienceJobs .work {
+    font-size: 19px;
+  }
+  #experience .experienceJobs .jobInfo {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 993px) {
+  #education {
+    padding-left: 3em;
+  }
+  #education .educationTitle {
+    font-size: 40px;
+    margin-bottom: 1em;
+  }
+  #education .graduationBox .graduationTitleBox {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  #education .graduationBox .graduationTitleBox .graduationTitle {
+    font-size: 19px;
+  }
+  #education .graduationBox .graduationTitleBox .graduationDate {
+    color: chocolate;
+    margin-right: 3em;
+  }
+  #education .graduationBox .universityInfoBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4em;
+  }
+  #education .graduationBox .universityInfoBox .professionName {
+    font-size: 15px;
+    color: #424242;
+  }
+}
+@media screen and (min-width: 993px) {
+  #skills {
+    padding-left: 3em;
+  }
+}/*# sourceMappingURL=style.css.map */

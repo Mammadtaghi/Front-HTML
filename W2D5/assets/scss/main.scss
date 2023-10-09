@@ -1,0 +1,127 @@
+// Abstracts
+
+@import "../scss/abstracts/mixxin";
+@import "../scss/abstracts/variables";
+
+//Base
+
+@import "../scss/base/reset";
+@import "../scss/base/typoghraphy";
+
+// Layouts
+
+@import "../scss/layouts/footer";
+@import "../scss/layouts/forms";
+@import "../scss/layouts/navigation";
+@import "../scss/layouts/button";
+@import "../scss/layouts/divider";
+
+// Pages
+
+@import "../scss/pages/about";
+@import "../scss/pages/home";
+
+// Themes
+
+@import "../scss/themes/dark";
+@import "../scss/themes/light";
+
+#BootstrapStart{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://startbootstrap.github.io/startbootstrap-creative/assets/img/bg-masthead.jpg);
+    opacity: 0.9;
+
+    .mainBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .bootstrapStartTitle{
+            font-size: 55px;
+            font-weight: 500;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .bootstrapStartDivider{
+            // color: $orange;
+            background-color: $orange;
+        }
+
+        .bootstrapStartInfo{
+            font-size: 20px;
+            color: white;
+            margin-bottom: 50px;
+
+        }
+
+        .bootstrapStartButton{
+            color: white;
+            background-color: $orange;
+        }
+    }
+}
+
+#WhatYouNeedAtYourService{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .whatYouNeedBox{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .upperSide{
+        background-color: $orange;
+        opacity: 0.9;
+
+        .upperSideTitle{
+            font-size: 35px;
+            color: white;
+        }
+
+        .upperSideDivider{
+            background-color: white;
+        }
+
+        .upperSideInfo{
+            color: white;
+            font-size: 15px;
+        }
+
+        .upperSideButton{
+            color: Black;
+            background-color: white;
+        }
+    }
+
+    .downerSide{
+        background-color: white;
+
+        .downerSideTitle{
+            font-size: 35px;
+        }
+
+        .downerSideDivider{
+            background-color: $orange;
+        }
+
+        .servicesBox{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+    }
+}

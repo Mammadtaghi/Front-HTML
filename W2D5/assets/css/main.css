@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.navLink {
+  color: #ccc;
+}
+
+footer {
+  width: auto;
+  height: fit-content;
+}
+
+.navigation {
+  width: 100vw;
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.navigation .mainNavBox .navBox {
+  padding: 20px 100px;
+}
+.navigation .mainNavBox .leftSide {
+  display: flex;
+  position: absolute;
+  left: 0;
+}
+.navigation .mainNavBox .leftSide .leftSideTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+.navigation .mainNavBox .rightSide {
+  position: absolute;
+  right: 0;
+}
+.navigation .mainNavBox .rightSide .rightSideTitle {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0px 15px;
+}
+
+.btn {
+  border: 0px;
+  border-radius: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding: 20px 30px;
+}
+
+.divider {
+  text-align: center;
+  width: 52px;
+  height: 4px;
+  border: 0px;
+  margin: 30px 0px;
+  opacity: 1;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+#BootstrapStart {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://startbootstrap.github.io/startbootstrap-creative/assets/img/bg-masthead.jpg);
+  opacity: 0.9;
+}
+#BootstrapStart .mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#BootstrapStart .mainBox .bootstrapStartTitle {
+  font-size: 55px;
+  font-weight: 500;
+  color: white;
+  flex-wrap: wrap;
+}
+#BootstrapStart .mainBox .bootstrapStartDivider {
+  background-color: #ff5020;
+}
+#BootstrapStart .mainBox .bootstrapStartInfo {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 50px;
+}
+#BootstrapStart .mainBox .bootstrapStartButton {
+  color: white;
+  background-color: #ff5020;
+}
+
+#WhatYouNeedAtYourService {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+#WhatYouNeedAtYourService .whatYouNeedBox {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#WhatYouNeedAtYourService .upperSide {
+  background-color: #ff5020;
+  opacity: 0.9;
+}
+#WhatYouNeedAtYourService .upperSide .upperSideTitle {
+  font-size: 35px;
+  color: white;
+}
+#WhatYouNeedAtYourService .upperSide .upperSideDivider {
+  background-color: white;
+}
+#WhatYouNeedAtYourService .upperSide .upperSideInfo {
+  color: white;
+  font-size: 15px;
+}
+#WhatYouNeedAtYourService .upperSide .upperSideButton {
+  color: Black;
+  background-color: white;
+}
+#WhatYouNeedAtYourService .downerSide {
+  background-color: white;
+}
+#WhatYouNeedAtYourService .downerSide .downerSideTitle {
+  font-size: 35px;
+}
+#WhatYouNeedAtYourService .downerSide .downerSideDivider {
+  background-color: #ff5020;
+}
+#WhatYouNeedAtYourService .downerSide .servicesBox {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=main.css.map */

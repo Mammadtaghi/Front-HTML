@@ -1,0 +1,38 @@
+.navigation{
+    width: 100vw;
+    display: flex;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .mainNavBox{
+
+        .navBox{
+            padding: 20px 100px;
+        }
+
+        .leftSide{
+            display: flex;
+            position: absolute;
+            left: 0;
+
+            .leftSideTitle{
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+
+        .rightSide{
+            position: absolute;
+            right: 0;
+
+            .rightSideTitle{
+                font-size: 15px;
+                font-weight: 700;
+                padding: 0px 15px;
+
+            }
+        }
+    }
+}
