@@ -1,0 +1,46 @@
+.square{
+    width: 100px;
+    height: 100px;
+    
+}
+
+#red{
+    background-color: red;
+
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    z-index: 0;
+
+}
+
+#yellow{
+    background-color: yellow;
+
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 1;
+
+}
+
+#green{
+    background-color: green;
+
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    z-index: 2;
+
+}
+
+#blue{
+    background-color: blue;
+
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: -1;
+
+}
+

@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border: 0px;
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg);
+}
+#hero .heroD {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero .heroTitle {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+#hero .heroInfo {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+#hero .findMore {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px 30px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgba(0, 141, 207, 0.76);
+  color: white;
+}
+
+#whatWeOffer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 141, 207, 0.76);
+}
+#whatWeOffer .nextProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#whatWeOffer .nextProject .nextProjectTitle {
+  margin-top: 100px;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+#whatWeOffer .nextProject .nextProjectInfo {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#whatWeOffer .nextProject .whatWeOfferButton {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: #212529;
+  margin-bottom: 100px;
+}
+#whatWeOffer .services {
+  display: flex;
+  flex-direction: column;
+}
+#whatWeOffer .services .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#whatWeOffer .services .titleBox .serviceTopTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ECB807;
+  margin: 100px 0px 10px 0px;
+}
+#whatWeOffer .services .titleBox .whatWeOfferTitle {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
+}
+#whatWeOffer .services .servicesBox {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 100px;
+}
+#whatWeOffer .services .servicesBox .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#whatWeOffer .services .servicesBox .service i {
+  font-size: 40px;
+  padding: 40px;
+  color: rgba(0, 141, 207, 0.76);
+  background-color: whitesmoke;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+#whatWeOffer .services .servicesBox .service .serviceTitle {
+  font-size: larger;
+  font-weight: 700;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+#whatWeOffer .services .servicesBox .service .serviceInfo {
+  font-size: medium;
+  color: whitesmoke;
+}
+
+#NextWebsite {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-callout.jpg);
+}
+#NextWebsite .nextWebsiteBox {
+  display: flex;
+  flex-direction: column;
+}
+#NextWebsite .nextWebsiteBox .nextWebsiteTitle {
+  font-size: 40px;
+  text-align: center;
+}
+#NextWebsite .nextWebsiteBox .nextWebsiteButton {
+  font-size: 15px;
+  background-color: rgba(0, 141, 207, 0.76);
+}/*# sourceMappingURL=main.css.map */

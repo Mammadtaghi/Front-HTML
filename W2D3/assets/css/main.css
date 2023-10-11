@@ -1,0 +1,29 @@
+div #BMW .parallax{
+    width: 100%;
+    height: 1000px;
+    background-image: url(https://www.bmw.az/content/dam/bmw/common/all-models/m-series/m8-coupe/2022/onepager/bmw-m8-coupe-onepager-sp-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div #Mercedes .parallax{
+    width: 100%;
+    height: 1000px;
+    background-image: url(https://cdn.wallpapersafari.com/79/62/KtgDFQ.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Text{
+    color: rgb(0, 120, 120);
+    font-size: large;
+
+}
+.Text:hover{
+    margin: 10px 30px;
+    background-color: orangered;
+    opacity: 0.6;
+    transition: 5s;
+}
