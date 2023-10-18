@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // const Users = [
+        //     {
+        //         name: "Albinoni",
+        //         password: "idk"
+        //     },
+
+        //     {
+        //         name: "Necef",
+        //         password: "hedontknow"
+        //     },
+
+
+        // ]
+
+        const arr = [
+            {
+                "id": 2,
+                "description": "Sweet and savory sauces relishes spreads and seasonings",
+                "name": "Condiments"
+            },
+            {
+                "id": 1,
+                "description": "Soft drinks coffees teas beers and ales",
+                "name": "Beverages"
+            },
+            {
+                "id": 3,
+                "description": "Desserts candies and sweet breads",
+                "name": "Confections"
+            },
+            {
+                "id": 4,
+                "description": "Cheeses",
+                "name": "Dairy Products"
+            },
+            {
+                "id": 5,
+                "description": "Breads crackers pasta and cereal",
+                "name": "Grains/Cereals"
+            },
+            {
+                "id": 6,
+                "description": "Prepared meats",
+                "name": "Meat/Poultry"
+            },
+            {
+                "id": 7,
+                "description": "Dried fruit and bean curd",
+                "name": "Produce"
+            },
+            {
+                "id": 8,
+                "description": "Seaweed and fish",
+                "name": "Seafood"
+            }
+        ]
+
+
+
+        function searchForKey(key, object, word) {
+            let found = []
+            for (let i = 0; i < object.length; i++) {
+                if (object[i][key].toLowerCase().includes(word.toLowerCase().trim())) {
+                    found.push(object[i])
+                }
+            }
+
+            console.table(found);
+        }
+
+        searchForKey("description", arr, "     sweet   ")
+
+        // object.sort((a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0))
+
+        // obj.sort((a,b) => (a.description > b.description) ? 1 : ((b.description > a.description) ? -1 : 0))
+
+        // console.table(obj);
+
+
+        // class Human {
+        //     constructor(name, surname) {
+        //         this.name = name
+        //         this.surname = surname
+        //     }
+
+
+        // }
+
+        // class Worker extends Human {
+        //     constructor(name, surname, job, salary) {
+        //         super(name, surname)
+        //         this.job = job
+        //         this.salary = salary
+        //     }
+        // }
+
+        // const doctor = new Worker("Albinoni", "Aliyev", "Doctor", 5000)
+
+    </script>
+</body>
+
+</html>
