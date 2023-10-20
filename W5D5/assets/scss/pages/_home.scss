@@ -1,0 +1,59 @@
+#hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://preview.colorlib.com/theme/sierra/img/home-slider/slider-bg-1.png.webp);
+
+    .hero-container{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        .hero-container-left{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            .hero-title{
+                font-size: 60px;
+                margin-bottom: 30px;
+            }
+
+            .hero-text{
+                font-size: 30px;
+                margin-bottom: 50px;
+            }
+
+            .hero-discover-btn{
+                padding: 20px 40px;
+                background-image: linear-gradient(to right,rgb(96, 124, 215) 50%, rgb(140, 90, 221));
+                border: 10px solid rgb(122, 107, 255);
+                border-radius: 5em;
+                color: white;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #hero{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        .hero-container{
+            display: flex;
+            justify-content: space-between;
+    
+            .hero-container-right{
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+}
