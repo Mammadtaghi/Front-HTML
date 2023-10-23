@@ -113,17 +113,94 @@ nav .container-nav .container-right .fa-bars {
 }
 
 @media screen and (max-width: 992px) {
-  #hero {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-  }
-  #hero .hero-container {
-    display: flex;
-    justify-content: space-between;
-  }
   #hero .hero-container .hero-container-right img {
     display: none;
   }
+}
+#features {
+  display: flex;
+  justify-content: center;
+}
+#features .feature-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#features .feature-container .title-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#features .feature-container .title-box .title-discover {
+  margin: 20px 0;
+  color: gray;
+}
+#features .feature-container .title-box .feature-title {
+  font-size: 50px;
+  font-weight: 500;
+}
+#features .feature-container .features-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#features .feature-container .features-box .feature {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#features .feature-container .features-box .feature .feature-name {
+  margin: 1.5em 0;
+  font-size: 25px;
+}
+#features .feature-container .features-box .feature .feature-info {
+  color: gray;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 5em;
+}
+#features .feature-container .features-box .feature .feature-btn {
+  padding: 20px 40px;
+  background-image: linear-gradient(to right, rgb(96, 124, 215) 50%, rgb(140, 90, 221));
+  border: 10px solid rgb(122, 107, 255);
+  border-radius: 5em;
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+#features .feature-container .features-box .feature:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
+}
+#features .feature-container .features-box .feature:hover .feature-btn {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#wedont {
+  display: flex;
+  justify-content: center;
+}
+#wedont .wedont-commit-container {
+  display: flex;
+  justify-content: center;
+}
+#wedont .wedont-commit-container .wedont-commit-textBox {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(https://preview.colorlib.com/theme/sierra/img/3d-slider-shap.png.webp);
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */

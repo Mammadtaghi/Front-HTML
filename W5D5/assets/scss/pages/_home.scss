@@ -41,14 +41,7 @@
 
 @media screen and (max-width: 992px) {
     #hero{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
         .hero-container{
-            display: flex;
-            justify-content: space-between;
-    
             .hero-container-right{
                 img{
                     display: none;
@@ -57,3 +50,107 @@
         }
     }
 }
+
+#features{
+    display: flex;
+    justify-content: center;
+    .feature-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title-box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .title-discover{
+                margin: 20px 0;
+                color: gray;
+            }
+
+            .feature-title{
+                font-size: 50px;
+                font-weight: 500;
+            }
+
+        }
+
+        .features-box{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+
+            .feature{
+                width: 350px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .feature-name{
+                    margin: 1.5em 0;
+                    font-size: 25px;
+                }
+
+                .feature-info{
+                    color: gray;
+                    font-weight: 500;
+                    line-height: 30px;
+                    margin-bottom: 5em;
+                }
+
+                .feature-btn{
+                    padding: 20px 40px;
+                    background-image: linear-gradient(to right,rgb(96, 124, 215) 50%, rgb(140, 90, 221));
+                    border: 10px solid rgb(122, 107, 255);
+                    border-radius: 5em;
+                    color: white;
+                    font-size: 15px;
+                    opacity: 0;
+                    transition: 0.3s;
+
+                }
+
+            }
+            .feature:hover{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: 0.5s;
+            }
+
+            .feature:hover .feature-btn{
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+#wedont{
+    display: flex;
+    justify-content: center;
+
+    .wedont-commit-container{
+        display: flex;
+        justify-content: center;
+
+        .wedont-commit-textBox{
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url(https://preview.colorlib.com/theme/sierra/img/3d-slider-shap.png.webp);
+            background-size: cover;
+        }
+    }
+}
+
