@@ -1,0 +1,32 @@
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 400px auto;
+}
+#box1{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+}
+
+.makeBig{
+    transform: scale(2);
+}
+
+.shrink{
+    transform: scale(0.5, 0.3);
+}
+
+.noidea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: salmon;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
