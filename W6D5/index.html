@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Movie Form start -->
+    <form action="Movie">
+
+        <label for="movieImg">Image</label><br>
+        <input type="text" id="movieImg"><br><br>
+
+        <label for="movieName">Name</label><br>
+        <input type="text" id="movieName"><br><br>
+
+        <label for="movieImdb">IMDb of The Movie</label><br>
+        <input type="number" step="0.1" id="movieImdb" min="0" max="10"><br><br>
+
+        <label for="movieCategory">Category</label><br>
+        <input type="text" id="movieCategory"><br><br>
+
+        <label for="movieDirector">Director of The Movie</label><br>
+        <input type="text" id="movieDirector"><br><br>
+
+        <input type="submit" id="submit"><br><br>
+
+    </form>
+    <!-- Movie Form end -->
+
+    <!-- Search Form start -->
+    <form action="Search">
+
+        <label for="search">Search</label><br>
+        <input type="text" id="search">
+
+        <select name="For" id="select">
+            
+        </select>
+        <br><br> 
+
+    </form>
+    <!-- Search Form end -->
+
+
+    <!-- Table start -->
+    <table>
+
+        <thead>
+            <tr>
+                <th>Movie Image</th>
+                <th>Movie Name</th>
+                <th>Movie IMDb</th>
+                <th>Movie Category</th>
+                <th>Movie Director</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+
+    </table>
+    <!-- Table end -->
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
