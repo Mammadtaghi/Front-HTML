@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Name</label>
+    <input type="text" id="nameInput">
+    <input type="button" onclick="createData()" value="Create" id="createBtn">
+    <input type="button" onclick="removeData()" value="Remove" id="removeBtn">
+    <input type="button" onclick="updateData()" value="Update" id="updateBtn">
+
+
+
+
+    <table border="1px">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        // Tbody
+        const tbody = document.getElementById('tbody')
+
+        // Getting data to table
+        async function fetchData() {
+            try {
+                let response = await fetch("http://localhost:3000/users").then(res=>res.json())
+                
+                response.forEach(element => {
+                    let tr = document.createElement('tr')
+
+                    tr.innerHTML = `
+                    <td>${element.id}</td>
+                    <td>${element.name}</td>
+                    <td>${element.job}</td>
+                    <td>
+                        <button onclick="editData(${element.id})">Edit</button>
+                        <button onclick="deleteData(${element.id})">Delete</button>
+                    </td>
+                    `
+                    tbody.append(tr)
+                });
+                
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        fetchData()
+
+
+    </script>
+</body>
+</html>
