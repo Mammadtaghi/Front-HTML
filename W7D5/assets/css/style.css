@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span, a {
+  font-family: "Fuggles", cursive;
+  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .greenLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .greenLine .headerContainer .headerLeft {
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select {
+  border: 0px;
+  background-color: rgba(135, 232, 16, 0.6);
+  color: white;
+}
+header .greenLine .headerContainer .headerLeft, header .greenLine .headerContainer .headerRight {
+  padding: 20px 0px;
+}
+header .headDiv {
+  display: flex;
+  justify-content: center;
+}
+header .headDiv .headDivContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headDiv .headDivContainer .headDivLeft, header .headDiv .headDivContainer .headDivRight {
+  padding: 40px 0px;
+}
+header .headDiv .headDivContainer .headDivLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneNumber {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight {
+  display: flex;
+}
+header .headDiv .headDivContainer .headDivRight .icons a {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i {
+  margin: 0px 5px;
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i:hover {
+  color: aquamarine;
+  transition: 0.2s;
+}
+header #nav {
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer .navList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #nav .navContainer .navList .navItem {
+  padding: 15px 0px;
+  font-size: 17px;
+}
+header #nav .navContainer .navList .navItem:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+  header .greenLine {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivLeft {
+    display: none;
+  }
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: -20%;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .greenLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .greenLine .headerContainer .headerLeft {
+  color: white;
+}
+header .greenLine .headerContainer .headerRight select {
+  border: 0px;
+  background-color: rgba(135, 232, 16, 0.6);
+  color: white;
+}
+header .greenLine .headerContainer .headerLeft, header .greenLine .headerContainer .headerRight {
+  padding: 20px 0px;
+}
+header .headDiv {
+  display: flex;
+  justify-content: center;
+}
+header .headDiv .headDivContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headDiv .headDivContainer .headDivLeft, header .headDiv .headDivContainer .headDivRight {
+  padding: 40px 0px;
+}
+header .headDiv .headDivContainer .headDivLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(135, 232, 16, 0.6);
+  border-radius: 8px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivLeft .phoneNumber {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight {
+  display: flex;
+}
+header .headDiv .headDivContainer .headDivRight .icons a {
+  color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i {
+  margin: 0px 5px;
+  font-size: 20px;
+}
+header .headDiv .headDivContainer .headDivRight .icons a i:hover {
+  color: aquamarine;
+  transition: 0.2s;
+}
+header #nav {
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+header #nav .navContainer .navList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #nav .navContainer .navList .navItem {
+  padding: 15px 0px;
+  font-size: 17px;
+}
+header #nav .navContainer .navList .navItem:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+  header .greenLine {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivLeft {
+    display: none;
+  }
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    top: -20%;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
