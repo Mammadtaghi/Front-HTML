@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+select:focus {
+  border: 0px;
+}
+
 h1,
 h2,
 h3,
@@ -13,12 +17,12 @@ h4,
 h5,
 h6,
 p,
-span, a {
+span, a, select, option {
   font-family: "Fuggles", cursive;
   font-family: "Pixelify Sans", sans-serif;
   font-family: "Roboto", sans-serif;
   font-family: "Rubik", sans-serif;
-  color: black;
+  color: white;
 }
 
 header {
@@ -43,10 +47,14 @@ header .greenLine .headerContainer .headerLeft {
 }
 header .greenLine .headerContainer .headerRight select {
   border: 0px;
-  background-color: rgba(135, 232, 16, 0.6);
+  background-color: transparent;
   color: white;
 }
-header .greenLine .headerContainer .headerLeft, header .greenLine .headerContainer .headerRight {
+header .greenLine .headerContainer .headerRight select option {
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer .headerLeft,
+header .greenLine .headerContainer .headerRight {
   padding: 20px 0px;
 }
 header .headDiv {
@@ -59,7 +67,8 @@ header .headDiv .headDivContainer {
   justify-content: space-between;
   align-items: center;
 }
-header .headDiv .headDivContainer .headDivLeft, header .headDiv .headDivContainer .headDivRight {
+header .headDiv .headDivContainer .headDivLeft,
+header .headDiv .headDivContainer .headDivRight {
   padding: 40px 0px;
 }
 header .headDiv .headDivContainer .headDivLeft {
@@ -78,6 +87,7 @@ header .headDiv .headDivContainer .headDivLeft .phoneIcon {
 }
 header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
   font-size: 20px;
+  color: white;
 }
 header .headDiv .headDivContainer .headDivLeft .phoneNumber {
   color: black;
@@ -87,6 +97,9 @@ header .headDiv .headDivContainer .headDivRight {
 }
 header .headDiv .headDivContainer .headDivRight .icons a {
   color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+  display: none;
 }
 header .headDiv .headDivContainer .headDivRight .icons a i {
   margin: 0px 5px;
@@ -112,12 +125,48 @@ header #nav .navContainer .navList {
   align-items: center;
 }
 header #nav .navContainer .navList .navItem {
+  position: relative;
   padding: 15px 0px;
   font-size: 17px;
 }
-header #nav .navContainer .navList .navItem:hover a {
+header #nav .navContainer .navList .navItem:hover .navAnchor {
   color: rgba(135, 232, 16, 0.6);
   transition: 0.2s;
+}
+header #nav .navContainer .navList .navItem:hover .subNav {
+  display: flex;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: 1s;
+}
+header #nav .navContainer .navList .navItem .subNav {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover {
+  transform: translateX(8px);
+  transition: 0.5s;
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.3s;
+}
+header #nav .navContainer .navList .navItem #homeSubNav {
+  width: 120px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav {
+  column-gap: 20px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav .shopLine {
+  width: 1px;
+  background-color: grey;
+}
+header #sideNav {
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -126,6 +175,137 @@ header #nav .navContainer .navList .navItem:hover a {
   }
   header .headDiv .headDivContainer .headDivLeft {
     display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-users,
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-heart {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+    display: inline;
+  }
+  header #nav {
+    display: none;
+  }
+  header #sideNav {
+    display: block;
+    width: 320px;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.8);
+    position: relative;
+    top: -103px;
+    left: -350px;
+    transition: left 0.5s;
+  }
+  header #sideNav .padding-left {
+    padding-left: 30px;
+  }
+  header #sideNav .xMark {
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  header #sideNav .xMark .fa-xmark {
+    font-size: 30px;
+  }
+  header #sideNav .sideNavPhone {
+    display: flex;
+    align-items: center;
+  }
+  header #sideNav .sideNavPhone .phoneIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(135, 232, 16, 0.9);
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  header #sideNav .sideNavPhone .phoneIcon .fa-phone {
+    font-size: 20px;
+    color: white;
+  }
+  header #sideNav .sideNavPhone a {
+    color: white;
+    font-size: 20px;
+  }
+  header #sideNav .currencyAndIcons {
+    display: flex;
+    column-gap: 5px;
+  }
+  header #sideNav .currencyAndIcons select {
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    color: white;
+  }
+  header #sideNav .currencyAndIcons select option {
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 0px;
+  }
+  header #sideNav .currencyAndIcons .users {
+    position: relative;
+    margin: 10px 0;
+  }
+  header #sideNav .currencyAndIcons .users .fa-users {
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv {
+    display: none;
+    width: 160px;
+    position: absolute;
+    left: -10px;
+    padding: 15px;
+    background-color: black;
+    border-radius: 4px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv .usersList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  header #sideNav .currencyAndIcons .heartDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #sideNav .currencyAndIcons .heartDiv .fa-heart {
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown {
+    width: 100%;
+    margin: 10px 0;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover {
+    background-color: grey;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownMenu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideNavContact a,
+  header #sideNav .sideNavListDiv .sideNavAboutUs a {
+    font-size: 25px;
   }
 }
 @keyframes modal {
@@ -138,6 +318,14 @@ header #nav .navContainer .navList .navItem:hover a {
     top: 0;
   }
 }
+.display {
+  display: flex !important;
+}
+
+.maxHeight {
+  max-height: 130px !important;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -160,10 +348,14 @@ header .greenLine .headerContainer .headerLeft {
 }
 header .greenLine .headerContainer .headerRight select {
   border: 0px;
-  background-color: rgba(135, 232, 16, 0.6);
+  background-color: transparent;
   color: white;
 }
-header .greenLine .headerContainer .headerLeft, header .greenLine .headerContainer .headerRight {
+header .greenLine .headerContainer .headerRight select option {
+  background-color: rgba(139, 224, 11, 0.6);
+}
+header .greenLine .headerContainer .headerLeft,
+header .greenLine .headerContainer .headerRight {
   padding: 20px 0px;
 }
 header .headDiv {
@@ -176,7 +368,8 @@ header .headDiv .headDivContainer {
   justify-content: space-between;
   align-items: center;
 }
-header .headDiv .headDivContainer .headDivLeft, header .headDiv .headDivContainer .headDivRight {
+header .headDiv .headDivContainer .headDivLeft,
+header .headDiv .headDivContainer .headDivRight {
   padding: 40px 0px;
 }
 header .headDiv .headDivContainer .headDivLeft {
@@ -195,6 +388,7 @@ header .headDiv .headDivContainer .headDivLeft .phoneIcon {
 }
 header .headDiv .headDivContainer .headDivLeft .phoneIcon .fa-phone {
   font-size: 20px;
+  color: white;
 }
 header .headDiv .headDivContainer .headDivLeft .phoneNumber {
   color: black;
@@ -204,6 +398,9 @@ header .headDiv .headDivContainer .headDivRight {
 }
 header .headDiv .headDivContainer .headDivRight .icons a {
   color: black;
+}
+header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+  display: none;
 }
 header .headDiv .headDivContainer .headDivRight .icons a i {
   margin: 0px 5px;
@@ -229,12 +426,48 @@ header #nav .navContainer .navList {
   align-items: center;
 }
 header #nav .navContainer .navList .navItem {
+  position: relative;
   padding: 15px 0px;
   font-size: 17px;
 }
-header #nav .navContainer .navList .navItem:hover a {
+header #nav .navContainer .navList .navItem:hover .navAnchor {
   color: rgba(135, 232, 16, 0.6);
   transition: 0.2s;
+}
+header #nav .navContainer .navList .navItem:hover .subNav {
+  display: flex;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: 1s;
+}
+header #nav .navContainer .navList .navItem .subNav {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover {
+  transform: translateX(8px);
+  transition: 0.5s;
+}
+header #nav .navContainer .navList .navItem .subNav ul > li:hover a {
+  color: rgba(135, 232, 16, 0.6);
+  transition: 0.3s;
+}
+header #nav .navContainer .navList .navItem #homeSubNav {
+  width: 120px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav {
+  column-gap: 20px;
+}
+header #nav .navContainer .navList .navItem #shopSubNav .shopLine {
+  width: 1px;
+  background-color: grey;
+}
+header #sideNav {
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -243,6 +476,137 @@ header #nav .navContainer .navList .navItem:hover a {
   }
   header .headDiv .headDivContainer .headDivLeft {
     display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-users,
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-heart {
+    display: none;
+  }
+  header .headDiv .headDivContainer .headDivRight .icons a .fa-bars {
+    display: inline;
+  }
+  header #nav {
+    display: none;
+  }
+  header #sideNav {
+    display: block;
+    width: 320px;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.8);
+    position: relative;
+    top: -103px;
+    left: -350px;
+    transition: left 0.5s;
+  }
+  header #sideNav .padding-left {
+    padding-left: 30px;
+  }
+  header #sideNav .xMark {
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  header #sideNav .xMark .fa-xmark {
+    font-size: 30px;
+  }
+  header #sideNav .sideNavPhone {
+    display: flex;
+    align-items: center;
+  }
+  header #sideNav .sideNavPhone .phoneIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(135, 232, 16, 0.9);
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  header #sideNav .sideNavPhone .phoneIcon .fa-phone {
+    font-size: 20px;
+    color: white;
+  }
+  header #sideNav .sideNavPhone a {
+    color: white;
+    font-size: 20px;
+  }
+  header #sideNav .currencyAndIcons {
+    display: flex;
+    column-gap: 5px;
+  }
+  header #sideNav .currencyAndIcons select {
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    color: white;
+  }
+  header #sideNav .currencyAndIcons select option {
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 0px;
+  }
+  header #sideNav .currencyAndIcons .users {
+    position: relative;
+    margin: 10px 0;
+  }
+  header #sideNav .currencyAndIcons .users .fa-users {
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv {
+    display: none;
+    width: 160px;
+    position: absolute;
+    left: -10px;
+    padding: 15px;
+    background-color: black;
+    border-radius: 4px;
+  }
+  header #sideNav .currencyAndIcons .users .usersListDiv .usersList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  header #sideNav .currencyAndIcons .heartDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #sideNav .currencyAndIcons .heartDiv .fa-heart {
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown {
+    width: 100%;
+    margin: 10px 0;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownTitle:hover {
+    background-color: grey;
+  }
+  header #sideNav .sideNavListDiv .sideDropdown .dropdownMenu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  header #sideNav .sideNavListDiv .sideNavContact a,
+  header #sideNav .sideNavListDiv .sideNavAboutUs a {
+    font-size: 25px;
   }
 }
 @keyframes modal {
@@ -254,4 +618,11 @@ header #nav .navContainer .navList .navItem:hover a {
     opacity: 1;
     top: 0;
   }
+}
+.display {
+  display: flex !important;
+}
+
+.maxHeight {
+  max-height: 130px !important;
 }/*# sourceMappingURL=style.css.map */
