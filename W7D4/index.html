@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <label for="">Name</label>
     <input type="text" id="nameInput">
-    <input type="button" onclick="createData()" value="Create" id="createBtn">
-    <input type="button" onclick="removeData()" value="Remove" id="removeBtn">
+    <label for="">Job</label>
+    <input type="text" id="jobInput">
+    <input type="button" onclick="createData(1)" value="Create" id="createBtn">
     <input type="button" onclick="updateData()" value="Update" id="updateBtn">
 
 
@@ -35,18 +38,35 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
 
-        // Tbody
+        // URL
+        baseURL = "http://localhost:3000/users"
+
+        // HTML stuff
         const tbody = document.getElementById('tbody')
+        const nameInput = document.getElementById('nameInput')
+        const jobInput = document.getElementById('jobInput')
 
         // Getting data to table
         async function fetchData() {
             try {
-                let response = await fetch("http://localhost:3000/users").then(res=>res.json())
-                
-                response.forEach(element => {
-                    let tr = document.createElement('tr')
+                let response = await fetch(baseURL).then(res => res.json())
 
-                    tr.innerHTML = `
+                // Cleaning table before adding data
+                tbody.innerHTML = ''
+                addToTable(response)
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        // Adding Data to the Table
+        function addToTable(data) {
+            data.forEach(element => {
+                // Creating row
+                let tr = document.createElement('tr')
+                // Adding data according keys in <td>s
+                tr.innerHTML = `
                     <td>${element.id}</td>
                     <td>${element.name}</td>
                     <td>${element.job}</td>
@@ -55,17 +75,63 @@
                         <button onclick="deleteData(${element.id})">Delete</button>
                     </td>
                     `
-                    tbody.append(tr)
-                });
+                tbody.append(tr)
+            });
+        }
+
+        fetchData()
+
+        async function createData(elemId) {
+            try {
+                // Posting values
+                await axios.post(baseURL, {
+                    "name": nameInput.value,
+                    "job": jobInput.value,
+                    "id": elemId
+                })
+                fetchData()
+            } catch (error) {
+                console.log('ok');
+                elemId++
+                createData(elemId)
+            }
+        }
+
+        async function deleteData(elemId) {
+            try {
+                let x = await axios.delete(`${baseURL}/${elemId}`)
+                fetchData()
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+
+        async function editData(elemId) {
+            try {
+                let x = await axios.get(`${baseURL}/${elemId}`)
+                console.log(x.data);
+                nameInput.value = x.data.name
+                jobInput.value = x.data.job
                 
             } catch (error) {
                 console.log(error);
             }
         }
 
-        fetchData()
-
+        async function updateData(elemId) {
+            try {
+                await axios.put(`${baseURL}/${elemId}`,{
+                    "name": nameInput.value,
+                    "job": jobInput.value,
+                    "id": elemId
+                })
+            } catch (error) {
+                console.log(error);
+            }
+        }
 
     </script>
 </body>
+
 </html>

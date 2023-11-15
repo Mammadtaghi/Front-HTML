@@ -1,0 +1,115 @@
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom: 1px solid gray;
+    height: 95px;
+
+}
+
+nav .navTitleBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav .navTitleBox .navTitle{
+    color: white;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .toggle{
+    color: white;
+    display: none;
+}
+
+.navigataions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.navList{
+    display: flex;
+    column-gap: 30px;
+
+}
+
+.navList li a{
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+
+    &:hover{
+        color: rgb(185, 185, 37);
+    }
+}
+
+.reservations{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservationsHolder{
+    display: flex;
+    word-break: keep-all;
+
+}
+
+.resWord{
+    color: rgb(216, 216, 0);
+}
+
+@media screen and (max-width: 992px) {
+    nav{
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .reservations{
+        width: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        grid-template-columns: 1fr;
+        
+    }
+
+    nav .toggle{
+        color: white;
+        display: inline-block;
+    }
+
+    nav .navTitleBox{
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .toggle{
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .navigataions{
+        display: none;
+    }
+
+    .reservations{
+        width: 0;
+        display: none;
+    }
+}

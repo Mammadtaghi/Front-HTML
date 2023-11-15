@@ -1,0 +1,38 @@
+#header{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('https://preview.colorlib.com/theme/pulse/img/slider/slider-2.jpg.webp');
+}
+
+
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+
+}
+
+.headerMiddle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+
+.headerTitle{
+    color: white;
+    font-size: 110px;
+    font-weight: 500;
+}
+
+.byChef{
+    align-self: flex-end;
+    color: white;
+    font-size: 20px;
+}

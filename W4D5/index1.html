@@ -354,17 +354,17 @@
             // 35.
 
             
-            // const arr = [0,2,21,3,4,3,5,35,235,12,15,54,23,13,42,35,2351,212]
+            const arr = [0,2,21,3,4,3,5,35,235,12,15,54,23,13,42,35,2351,212]
 
-            // let min = Infinity
+            let min = Infinity
 
-            // for (let i = 0; i < arr.length; i++) {
-            //     if (arr[i]<min && arr[i]%2!==0) {
-            //         min = arr[i]
-            //     }
-            // }
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i]<=min && arr[i]%2!==0) {
+                    min = arr[i]
+                }
+            }
             
-            // console.log(min);
+            console.log(min);
 
 
 
@@ -428,24 +428,24 @@
 
             // 39.
 
-            const arr = [12,23,21,3,4,5,35,235,12,15,54,3,13,42,3,3,3,3,3,3,3,3,3,3,33,3,,35,2351,212]
+            // const arr = [12,23,21,3,4,5,35,235,12,15,54,3,13,42,3,3,3,3,3,3,3,3,3,3,33,3,,35,2351,212]
 
-            let min = arr[0]
+            // let min = arr[0]
 
-            let minSay = 0
+            // let minSay = 0
 
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i]<min) {
-                    min = arr[i]
-                }
-            }
-            console.log(min);
-            for (let j = 0; j < arr.length; j++) {
-                if (arr[j]===min) {
-                    minSay++
-                }
-            }
-            console.log(minSay);
+            // for (let i = 0; i < arr.length; i++) {
+            //     if (arr[i]<min) {
+            //         min = arr[i]
+            //     }
+            // }
+            // console.log(min);
+            // for (let j = 0; j < arr.length; j++) {
+            //     if (arr[j]===min) {
+            //         minSay++
+            //     }
+            // }
+            // console.log(minSay);
 
 
 
