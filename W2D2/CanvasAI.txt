@@ -1,0 +1,66 @@
+// Get the canvas element
+const canvas = document.getElementById('sparkleCanvas');
+const ctx = canvas.getContext('2d');
+
+// Set the canvas size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Create an array to store sparkle dots
+let sparkles = [];
+
+// Define the Sparkle class
+class Sparkle {
+    constructor(x, y, size) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+    }
+
+    update() {
+        this.x += Math.random() * 4 - 2;
+        this.y += Math.random() * 4 - 2;
+
+        if (this.size > 0.2) {
+            this.size -= 0.1;
+        }
+    }
+}
+
+// Create function to animate the sparkles
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < sparkles.length; i++) {
+        sparkles[i].update();
+        sparkles[i].draw();
+        
+        if (sparkles[i].size <= 0.2) {
+            sparkles.splice(i, 1);
+            i--;
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+// Add event listener to create sparkles on mouse click
+canvas.addEventListener('click', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    for (let i = 0; i < 5; i++) {
+        const sparkle = new Sparkle(x, y, Math.random() * 3 + 2);
+        sparkles.push(sparkle);
+    }
+});
+
+// Start the animation
+animate();

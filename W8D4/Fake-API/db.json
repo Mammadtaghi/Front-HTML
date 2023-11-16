@@ -1,0 +1,50 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCPTAgiRM_9babxfJ6I6goBv526Iu1CIPpoA&usqp=CAU",
+      "name": "Object1",
+      "price": "20.00"
+    },
+    {
+      "id": 2,
+      "img": "https://img.freepik.com/premium-photo/beautiful-mountain-range-reflects-tranquil-water-generative-ai_188544-9117.jpg",
+      "name": "Nature1",
+      "price": "30.00"
+    },
+    {
+      "id": 3,
+      "img": "https://images.unsplash.com/photo-1622737133809-d95047b9e673?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMDcxMjkzMnx8ZW58MHx8fHx8",
+      "name": "Object2",
+      "price": "24.00"
+    },
+    {
+      "id": 4,
+      "img": "https://img.freepik.com/free-photo/forest-landscape_71767-127.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1699920000&semt=ais",
+      "name": "Nature2",
+      "price": "36.00"
+    },
+    {
+      "id": 5,
+      "img": "https://wow.zamimg.com/uploads/blog/images/20516-afterlives-ardenweald-4k-desktop-wallpapers.jpg",
+      "name": "Fiction1",
+      "price": "44.00"
+    },
+    {
+      "id": 6,
+      "img": "https://static.vecteezy.com/system/resources/thumbnails/025/067/762/small/4k-beautiful-colorful-abstract-wallpaper-photo.jpg",
+      "name": "Fiction2",
+      "price": "47.00"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
