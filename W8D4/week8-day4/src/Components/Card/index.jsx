@@ -2,7 +2,6 @@ import React from 'react'
 import "./index.css"
 
 function Card(item) {
-    console.log(item.for);
     return (
         <div className='Card'>
             <div className="productImgBox">

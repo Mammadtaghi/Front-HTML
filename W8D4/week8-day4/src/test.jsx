@@ -1,31 +1,24 @@
-import { Fragment, useEffect, useState } from 'react';
-import axios from 'axios';
+import { Fragment, useState } from 'react';
 import React from 'react'
 import Card from './Components/Card';
+import FetchData from './test2';
 
 function Test() {
 
-    const baseURL = "http://localhost:3000/products"
+    const baseURL = "https://northwind.vercel.app/api/categories"
     
     const [data, setData] = useState(null)
     const [load, setLoad] = useState(true)
 
-    useEffect(() => {
-        if (!data) {
-            try {
-                const FetchData = async () => {
-                    const response = await axios.get(baseURL)
-                    setData(response.data)
-                    setLoad(false)
-                    console.log(response.data);
-                }
-                FetchData()
-            } catch (error) {
-                console.log(error);
-            }
+    const LogOut=(data)=>{
+        if (load) {
+            console.log(data)
+            setData(data)
+            setLoad(false)
         }
+    }
 
-    }, [])
+    FetchData(baseURL, LogOut)
 
     return (
         <>
@@ -33,7 +26,7 @@ function Test() {
                 load ? <i className="fa-solid fa-spinner"></i> :
                     data && data.map((product, id) => {
                         return <Fragment key={id}>
-                            <Card img={product.img} name={product.name} price={product.price} for="ok" />
+                            <Card img={product.img} name={product.name} price={product.price} />
                         </Fragment>
                     })
             }
