@@ -1,0 +1,23 @@
+:root{
+  --mainBg:rgb(255, 255, 255);
+  --mainText:rgb(8, 8, 253);
+  --secondaryText:rgb(122, 121, 54);
+  --secondaryBg:rgb(15, 15, 15);
+}
+
+.dark{
+  --mainBg:rgb(0, 0, 0);
+  --mainText:rgb(8, 253, 69);
+  --secondaryText:rgb(70, 225, 252);
+  --secondaryBg:rgb(255, 255, 255);
+}
+
+body{
+  background-color: var(--mainBg);
+  color: var(--mainText);
+}
+
+h1,h2,h3,h4,h5,h6,p,span,i,button{
+  background-color: var(--secondaryBg);
+  color: var(--secondaryText);
+}

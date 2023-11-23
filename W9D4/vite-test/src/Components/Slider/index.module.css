@@ -1,0 +1,7 @@
+.tomato{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    border: 2px ridge black;
+}
