@@ -1,0 +1,43 @@
+:root {
+  --primaryBG:var(white);
+  --primaryT:var(grey);
+  --secondaryBG:var(tomato);
+  --secondaryT:var(Black);
+}
+
+.dark{
+  --primaryBG:var(rgb(31, 30, 30));
+  --primaryT:var(rgb(214, 214, 214));
+  --secondaryBG:var(rgb(71, 203, 255));
+  --secondaryT:var(rgb(136, 148, 255));
+}
+
+body{
+  background-color: var(--primaryBG);
+  color: var(--primaryT);
+}
+
+h1,h2,h3,h4,h5,h6,p,span,i,button{
+  background-color: var(--secondaryBG);
+  color: var(--secondaryT);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.allProducts{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
