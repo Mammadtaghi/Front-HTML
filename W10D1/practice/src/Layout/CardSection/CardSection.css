@@ -1,0 +1,10 @@
+section{
+    display: grid;
+    grid-template-areas:'grid1 grid2 grid3'
+                        'grid4 grid5 grid6';
+}
+
+a{
+    padding: 10px 20px;
+
+}
