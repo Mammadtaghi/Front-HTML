@@ -29,19 +29,19 @@ export const calculatorSlice = createSlice({
             if (state.operator) {
                 switch (state.operator) {
                     case "+":
-                        state.answer.push(state.num1 + state.num2)
+                        state.answer[0] = (state.num1 + state.num2)
                         return 
                     case "-":
-                        state.answer.push(state.num1 - state.num2)
+                        state.answer[0] = (state.num1 - state.num2)
                         return 
                     case '/':
-                        state.answer.push(state.num1 / state.num2)
+                        state.answer[0] = (state.num1 / state.num2)
                         return 
                     case '*':
-                        state.answer.push(state.num1 * state.num2)
+                        state.answer[0] = (state.num1 * state.num2)
                         return 
                     default:
-                        state.answer.push("Something went wrong")
+                        state.answer[0] = ("Something went wrong")
                         return 
                 }
             }
