@@ -1,0 +1,45 @@
+[
+{
+  "_id": "657a8839fbefad45c30d3e5f",
+  "title": "Secret of One Tower",
+  "description": "The struggle of the people against the shakh (king) who seized all of land and water resources.",
+  "category": [
+    "Adventure",
+    "Horror",
+    "Fiction"
+  ],
+  "image": "https://tvseans.az/uploads/thumbs/4fWbJ_5WgEYY9d0Izf3SCqtcu-3QbBDN.jpg",
+  "__v": 0
+},
+  {
+    "title": "Ali and Nino: A Love Story",
+    "description": "This iconic novel, written by Kurban Said, depicts a love story between Ali, a Muslim Azerbaijani, and Nino, a Christian Georgian princess, set against the backdrop of cultural and political turmoil in Baku during the early 20th century.",
+    "category": [
+      "Historical Fiction",
+      "Classic Literature",
+      "Cultural",
+      "Romance"
+    ],
+    "image": "https://m.media-amazon.com/images/I/51kDvpA6c8L._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Oil Rocks: City Above the Sea",
+    "description": "This book explores the story of Oil Rocks, a vast offshore city in Azerbaijan, providing an in-depth look at the unique environment, people, and the complex relationship between man and nature in this oil-producing metropolis.",
+    "category": [
+      "Non-Fiction",
+      "Architecture",
+      "Environmental Studies"
+    ],
+    "image": "https://m.media-amazon.com/images/M/MV5BYmQ4ODhjYmEtODY1Yy00Mzg4LTg4NTEtZWUwYmRmZmRhZjNkXkEyXkFqcGdeQXVyMjI3MjgyODg@._V1_.jpg"
+  },
+  {
+    "title": "The Last Island: A Naturalist's Sojourn on Triangle Island",
+    "description": "Written by Chingiz Abdullayev, this novel follows the adventures of a young biologist on a remote island, blending elements of mystery, suspense, and exploration of human nature.",
+    "category": [
+      "Mystery",
+      "Adventure",
+      "Fiction"
+    ],
+    "image": "https://m.media-amazon.com/images/I/51qa9UC2XNL._AC_UF894,1000_QL80_.jpg"
+  }
+]
