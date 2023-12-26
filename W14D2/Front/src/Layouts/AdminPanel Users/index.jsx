@@ -9,6 +9,8 @@ function AdminPanelUsers() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Get All Users
+
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -29,20 +31,35 @@ function AdminPanelUsers() {
     fetchUsers();
   }, [user.token]);
 
+  // Delete
+
   async function handleDelete(id) {
     try {
-      const res = await axios.delete(`http://localhost:8000/users/${id}`,{
+
+      const getUser = await axios.get(`http://localhost:8000/users/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${user.token}`,
         },
-      }).then(res=>res.data)
-  
+      }).then(res => res.data)
+
+      if (getUser.role.includes("Admin")) {
+        alert("You can't delete Admins");
+        return
+      }
+
+      // This is used to delete but we dont want to lose our users
+      const res = await axios.get(`http://localhost:8000/users/${id}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${user.token}`,
+        },
+      }).then(res => res.data)
+
       console.log(res);
     } catch (error) {
       console.log(error);
     }
-
   }
 
   return (
@@ -50,13 +67,13 @@ function AdminPanelUsers() {
       <h1>User List</h1>
       {loading ? (
         <h1>Loading...</h1>
-      ) : 
+      ) :
         <ul key={uuidv4()}>
           {users.map((item) => (
             <li key={uuidv4()}>
               <h3>Username: {item.username}</h3>
               <h4>Role: {item.role}</h4>
-              <button onClick={()=>handleDelete(item._id)}>Delete</button>
+              <button onClick={() => handleDelete(item._id)}>Delete</button>
             </li>
           ))}
         </ul>
