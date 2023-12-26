@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import { jwtDecode } from "jwt-decode";
 import "./index.scss";
 import { useUser } from "../../Context/userContext";
+import { useNavigate } from "react-router-dom";
 
 const FormikInitialValues = {
     username: '',
@@ -28,20 +29,27 @@ function LogIn() {
 
     const { user, setUser } = useUser()
 
+    const navigate = useNavigate()
+
     async function handleValues(values) {
+        try {
+            const response = await axios.post('http://localhost:8000/login', values)
 
-        const response = await axios.post('http://localhost:8000/login', values)
-        
-        const data = response.data
+            const data = response.data
 
-        const DecodedUser = jwtDecode(data,"AlbiKey")
+            const DecodedUser = jwtDecode(data, "AlbiKey")
 
-        setUser({
-            username:DecodedUser.username,
-            role:DecodedUser.role,
-            token:data
-        })
+            setUser({
+                username: DecodedUser.username,
+                role: DecodedUser.role,
+                token: data
+            })
 
+            console.log(data);
+
+        } catch (error) {
+            console.log(error.response.data.message);
+        }
     }
 
     return (
@@ -65,7 +73,6 @@ function LogIn() {
 
                 </Form>
             </Formik>
-            <textarea name="token" id="token" defaultValue={user.token} cols="30" rows="10"></textarea>
             <Link to='/register'>Go to Register</Link>
         </div>
     )
