@@ -5,12 +5,15 @@ import Error from "./Pages/Error Page";
 import Home from "./Pages/Home Page";
 import LogIn from "./Pages/LogIn";
 import SignUp from "./Pages/SignUp";
-import { UserProvider } from './Context/userContext';
+import { UserProvider, useUser } from './Context/userContext';
+import Account from './Pages/Account Page';
+import AdminPanel from './Pages/AdminPanel Page';
 
 function App() {
 
+  const { user, setUser } = useUser()
+
   return (
-    <UserProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -18,10 +21,12 @@ function App() {
             <Route path="/register" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/*" element={<Error />} />
+            {(user && (user.role === "User" || user.role === "Admin") ) ? <Route path='/account/:id' element={<Account/>}>Account</Route> : ''}
+            {(user && user.role === "Admin") ? <Route path='/adminpanel' element={<AdminPanel/>}>AdminPanel</Route> : ''}
+
           </Route>
         </Routes>
       </BrowserRouter>
-    </UserProvider>
   )
 }
 

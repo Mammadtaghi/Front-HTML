@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 const FormikInitialValues = {
     username: '',
     password: '',
-    role: 'User'
 }
 
 const SignUpSchema = Yup.object().shape({
@@ -35,6 +34,8 @@ function SignUp() {
 
         const data = response.data
 
+        console.log(data);
+
         setResponse(data)
 
     }
@@ -55,8 +56,6 @@ function SignUp() {
                 <label htmlFor="password">Password</label>
                 <Field id='' name='password' placeholder='Enter password' />
                 <ErrorMessage name="password" />
-                <label htmlFor="role">Role</label>
-                <Field id='' name='role' placeholder='Enter role' />
 
                 <button type="submit">Submit</button>
 

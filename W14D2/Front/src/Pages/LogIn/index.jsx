@@ -46,6 +46,7 @@ function LogIn() {
             })
 
             console.log(data);
+            navigate('/home')
 
         } catch (error) {
             console.log(error.response.data.message);
