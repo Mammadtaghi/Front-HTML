@@ -12,7 +12,7 @@ const FormikInitialValues = {
 
 const SignUpSchema = Yup.object().shape({
     username: Yup.string()
-    .notOneOf(['admin','user'],"Don't be a kid!")
+        .notOneOf(['admin', 'user'], "Don't be a kid!")
         .min(2, 'Too Short!')
         .max(20, 'Too Long!')
         .required('This is required'),
@@ -27,42 +27,42 @@ function SignUp() {
     const [response, setResponse] = useState('')
 
     async function handleValues(values) {
+        try {
+            const response = await axios.post('http://localhost:8000/register', values)
 
-        console.log(values);
+            const data = response.data
 
-        const response = await axios.post('http://localhost:8000/register', values)
+            setResponse(data)
 
-        const data = response.data
-
-        console.log(data);
-
-        setResponse(data)
-
+        } catch (error) {
+            console.log(error.response.data.message);
+            setResponse(error.response.data.message)
+        }
     }
 
     return (
         <>
-        <h1>Sign Up</h1>
-        <Formik
-            initialValues={FormikInitialValues}
-            validationSchema={SignUpSchema}
-            onSubmit={values => handleValues(values)}
-        >
-            <Form className="AlbiForm">
+            <h1>Sign Up</h1>
+            <Formik
+                initialValues={FormikInitialValues}
+                validationSchema={SignUpSchema}
+                onSubmit={values => handleValues(values)}
+            >
+                <Form className="AlbiForm">
 
-                <label htmlFor="username">Username</label>
-                <Field id='' name='username' placeholder='Enter username' />
-                <ErrorMessage name="username" />
-                <label htmlFor="password">Password</label>
-                <Field id='' name='password' placeholder='Enter password' />
-                <ErrorMessage name="password" />
+                    <label htmlFor="username">Username</label>
+                    <Field id='' name='username' placeholder='Enter username' />
+                    <ErrorMessage name="username" />
+                    <label htmlFor="password">Password</label>
+                    <Field id='' name='password' placeholder='Enter password' />
+                    <ErrorMessage name="password" />
 
-                <button type="submit">Submit</button>
+                    <button type="submit">Submit</button>
 
-            </Form>
-        </Formik>
-        <Link to='/login'>Go to Login</Link>
-        <p>{response && response}</p>
+                </Form>
+            </Formik>
+            <Link to='/login'>Go to Login</Link>
+            <p>{response && response}</p>
         </>
     )
 }
