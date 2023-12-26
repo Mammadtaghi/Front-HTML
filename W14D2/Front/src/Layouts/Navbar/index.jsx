@@ -10,10 +10,10 @@ function Navbar() {
   return (
     <nav style={{ display: 'flex', columnGap: '10px' }}>
       <NavLink to={'/'}>Home</NavLink>
-      <NavLink to={'/login'}>Login</NavLink>
-      <NavLink to={'/register'}>Sign Up</NavLink>
-      { (user && user.role === "User" || user.role === "Admin" ) ? <NavLink to={'/account/:id'}>Account</NavLink> : ''}
-      { (user && user.role === "Admin") ? <NavLink to={'/adminpanel'}>AdminPanel</NavLink> : ''}
+      { user.role ? "" : <NavLink to={'/register'}>Sign Up</NavLink>}
+      { user.role ? "" : <NavLink to={'/login'}>Login</NavLink>}
+      { (user.role === "User" || user.role === "Admin" ) ? <NavLink to={'/account'}>Account</NavLink> : ''}
+      { (user.role === "Admin") ? <NavLink to={'/adminpanel'}>AdminPanel</NavLink> : ''}
     </nav>
   )
 }

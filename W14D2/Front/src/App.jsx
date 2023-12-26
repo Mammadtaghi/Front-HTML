@@ -21,7 +21,7 @@ function App() {
             <Route path="/register" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/*" element={<Error />} />
-            {(user && (user.role === "User" || user.role === "Admin") ) ? <Route path='/account/:id' element={<Account/>}>Account</Route> : ''}
+            {(user && (user.role === "User" || user.role === "Admin") ) ? <Route path='/account' element={<Account/>}>Account</Route> : ''}
             {(user && user.role === "Admin") ? <Route path='/adminpanel' element={<AdminPanel/>}>AdminPanel</Route> : ''}
 
           </Route>

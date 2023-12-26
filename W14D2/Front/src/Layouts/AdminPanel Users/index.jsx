@@ -49,7 +49,7 @@ function AdminPanelUsers() {
       }
 
       // This is used to delete but we dont want to lose our users
-      const res = await axios.get(`http://localhost:8000/users/${id}`, {
+      const res = await axios.delete(`http://localhost:8000/users/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${user.token}`,

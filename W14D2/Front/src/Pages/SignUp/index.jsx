@@ -4,6 +4,9 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 import { Link } from 'react-router-dom';
+import { useUser } from '../../Context/userContext';
+import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 const FormikInitialValues = {
     username: '',
@@ -24,6 +27,10 @@ const SignUpSchema = Yup.object().shape({
 
 function SignUp() {
 
+    const navigate = useNavigate()
+
+    const { user, setUser } = useUser()
+
     const [response, setResponse] = useState('')
 
     async function handleValues(values) {
@@ -32,7 +39,18 @@ function SignUp() {
 
             const data = response.data
 
+            
+            const DecodedUser = jwtDecode(data, "AlbiKey")
+            
             setResponse(data)
+
+            setUser({
+                username: DecodedUser.username,
+                role: DecodedUser.role,
+                token: data
+            })
+
+            navigate('/')
 
         } catch (error) {
             console.log(error.response.data.message);
