@@ -12,8 +12,8 @@ function Navbar() {
       <NavLink to={'/'}>Home</NavLink>
       { user.role ? "" : <NavLink to={'/register'}>Sign Up</NavLink>}
       { user.role ? "" : <NavLink to={'/login'}>Login</NavLink>}
-      { (user.role === "User" || user.role === "Admin" ) ? <NavLink to={'/account'}>Account</NavLink> : ''}
-      { (user.role === "Admin") ? <NavLink to={'/adminpanel'}>AdminPanel</NavLink> : ''}
+      { (user.role.includes("User") || user.role.includes("Admin")) ? <NavLink to={'/account'}>Account</NavLink> : ''}
+      { (user.role.includes("Admin")) ? <NavLink to={'/adminpanel'}>AdminPanel</NavLink> : ''}
     </nav>
   )
 }
