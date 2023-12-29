@@ -22,7 +22,7 @@ function Home() {
       {isLoading ? <h1>Loading...</h1> : Products && Products.map(item => (
         <div key={v4()}>
           <h2>{item.title}</h2>
-          <h3 style={{textDecoration:"line-through"}}>${item.price}</h3><h3>${(item.price*(100 - item.discount))/100}</h3>
+          <div style={{display:'flex', justifyContent:'space-around'}}><h3 style={ item.discount ? {textDecoration:"line-through"} : {}}>${item.price}</h3>{ item.discount ? <h3>${(item.price*(100 - item.discount))/100}</h3> : null}</div>
         </div>
       ))}
     </main>

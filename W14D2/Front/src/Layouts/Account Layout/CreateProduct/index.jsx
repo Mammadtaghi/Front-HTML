@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import './index.scss';
 import { useUser } from '../../../Context/userContext';
 import axios from 'axios';
+import { useState } from 'react';
 
 const initialValues = {
     title: "",
@@ -30,7 +31,7 @@ function CreateProduct() {
 
     const { user } = useUser()
 
-    const [response, setResponse] = useState(null)
+    const [res, setRes] = useState()
 
     async function handleValues(values, actions) {
         values.categories = values.categories.split(" ")
@@ -47,6 +48,7 @@ function CreateProduct() {
         }).then(res=>res.data)
         await actions.resetForm()
         console.log(response);
+        setRes(response)
     }
 
     return (
@@ -80,6 +82,7 @@ function CreateProduct() {
                     <button type="submit">Submit</button>
                 </Form>
             </Formik>
+            <h2>{res}</h2>
         </>
     )
 }
