@@ -20,7 +20,7 @@ const LogInSchema = Yup.object().shape({
         .max(20, "Your name Can't be this Long!")
         .required('This is required'),
     password: Yup.string()
-        .min(4, "Password should contain at least 4 characters!")
+        .min(2, "Password should contain at least 2 characters!")
         .required("You need a password to access!"),
     role: Yup.string()
 })
@@ -28,6 +28,8 @@ const LogInSchema = Yup.object().shape({
 function LogIn() {
 
     const { user, setUser } = useUser()
+
+    const [res, setRes] = useState('')
 
     const navigate = useNavigate()
 
@@ -50,6 +52,7 @@ function LogIn() {
 
         } catch (error) {
             console.log(error.response.data.message);
+            setRes(error.response.data.message)
         }
     }
 
@@ -74,6 +77,7 @@ function LogIn() {
 
                 </Form>
             </Formik>
+            <span>{res}</span>
             <Link to='/register'>Go to Register</Link>
         </div>
     )
