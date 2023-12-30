@@ -44,6 +44,8 @@ function LogIn() {
             setUser({
                 username: DecodedUser.username,
                 role: DecodedUser.role,
+                basket: DecodedUser.basket,
+                wishlist: DecodedUser.wishlist,
                 token: data
             })
 

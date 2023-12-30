@@ -39,14 +39,15 @@ function SignUp() {
 
             const data = response.data
 
-            
             const DecodedUser = jwtDecode(data, "AlbiKey")
-            
+
             setResponse(data)
 
             setUser({
                 username: DecodedUser.username,
                 role: DecodedUser.role,
+                basket: DecodedUser.basket,
+                wishlist: DecodedUser.wishlist,
                 token: data
             })
 
